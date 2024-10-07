@@ -1,0 +1,18 @@
+{
+  "name": "Roberto Tello A",
+  "short_name": "Roberto Tello A",
+  "lang": "en-us",
+  "theme_color": "#1565c0",
+  "background_color": "#1565c0",
+  "icons": [{
+    "src": "/media/icon_hu60ae6b4ca600d80d1335fcad9d29bb0f_64661_192x192_fill_lanczos_center_3.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/media/icon_hu60ae6b4ca600d80d1335fcad9d29bb0f_64661_512x512_fill_lanczos_center_3.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}
