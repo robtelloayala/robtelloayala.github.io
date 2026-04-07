@@ -1,0 +1,21 @@
+.wg-about-avatar .avatar-wrapper {
+  width: 225px;
+  height: 225px;
+}
+
+.wg-about-avatar .avatar {
+  max-width: 270px;
+  max-height: 270px;
+}
+
+@media (max-width: 767.98px) {
+  .wg-about-avatar .avatar-wrapper {
+    width: 190px;
+    height: 190px;
+  }
+
+  .wg-about-avatar .avatar {
+    max-width: 220px;
+    max-height: 220px;
+  }
+}

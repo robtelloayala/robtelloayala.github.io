@@ -1,22 +1,20 @@
 ---
 title: "Optimal Testing and Containment Strategies for Universities in Mexico amid COVID-19"
 authors:
-- admin
 - Edwin Lock
 - Francisco Javier Marmolejo-Cossio
 - Jakob Jonnerby
 - Ninad Rajgopal
 - Hector Alonso Guzman-Gutierrez
 - Luis Alejandro Benavides-Vazquez
+- admin
 - Philip Lazos
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
-date: "2021-11-04T00:00:00Z"
-doi: ""
+# Exact publication date was not available from the accessible public metadata used here.
+date: "2021-01-01T00:00:00Z"
+doi: "10.1145/3465416.3483300"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2021-01-01T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -25,22 +23,21 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*EAAMO '21: Equity and Access in Algorithms, Mechanisms, and Optimization*"
-publication_short: ""
+publication: "In *Proceedings of the 1st ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization*"
+publication_short: "EAAMO 2021"
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: We study how universities in Mexico can combine diagnostic testing and containment strategies to reduce COVID-19 transmission under resource constraints, highlighting when testing is most effective and how targeted interventions improve campus outcomes.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: Testing and containment strategies for reducing COVID-19 transmission in Mexican universities under limited resources.
 
-tags:
-- Source Themes
+tags: []
 featured: false
 
-# links:
-# - name: ""
-#   url: ""
-url_pdf: https://dl.acm.org/doi/abs/10.1145/3465416.3483300d
+links:
+  - name: DOI
+    url: https://doi.org/10.1145/3465416.3483300
+url_pdf: ''
 url_code: 'https://github.com/hguzmang/eaamo'
 url_dataset: ''
 url_poster: ''
@@ -68,15 +65,7 @@ projects: []
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+slides: ''
 ---
-
-{{% callout note %}}
-Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
-
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
 
 Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).

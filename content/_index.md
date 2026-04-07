@@ -12,6 +12,19 @@ sections:
       username: admin
       # Override your bio text from `authors/admin/_index.md`?
       text:
+  - block: collection
+    id: featured
+    content:
+      title: Selected Publications
+      text: |-
+        Explore the full [publications archive](/publication/) for papers and linked materials.
+      filters:
+        folders:
+          - publication
+        exclude_featured: false
+    design:
+      columns: '2'
+      view: citation
   #- block: features
    # content:
     #  title: Skills
@@ -168,21 +181,6 @@ sections:
     #design:
      # columns: '2'
       #view: card
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      # |-
-       # {{% callout note %}}
-       # Quickly discover relevant content by [filtering publications](./publication/).
-       # {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      columns: '2'
-      view: citation
   #- block: collection
   #  id: talks
   ##  content:
@@ -203,8 +201,8 @@ sections:
     content:
       title: Contact
       subtitle:
-      text: '' 
-        #Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
+      text: |-
+        Email is the best way to reach me. You can also use the profile links above for Google Scholar, GitHub, LinkedIn, and my CV.
       # Contact (add or remove contact options as necessary)
       email: jtelloayala [at] g [dot] harvard [dot] edu
       #phone: 888 888 88 88
@@ -234,7 +232,24 @@ sections:
       #    name: Zoom Me
        #   link: 'https://zoom.com'
       # Automatically link email and phone or display as text?
-      autolink: false
+      autolink: true
+      contact_links:
+        - icon: graduation-cap
+          icon_pack: fas
+          name: Google Scholar
+          link: https://scholar.google.com/citations?user=EAJekCcAAAAJ&hl=es
+        - icon: github
+          icon_pack: fab
+          name: GitHub
+          link: https://github.com/robtelloayala
+        - icon: linkedin
+          icon_pack: fab
+          name: LinkedIn
+          link: https://www.linkedin.com/in/josé-roberto-tello-ayala-339b04129/
+        - icon: cv
+          icon_pack: ai
+          name: CV
+          link: uploads/resume.pdf
       # Email form provider
       form:
         provider: netlify
