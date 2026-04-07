@@ -34,9 +34,7 @@ summary: Testing and containment strategies for reducing COVID-19 transmission i
 tags: []
 featured: false
 
-links:
-  - name: DOI
-    url: https://doi.org/10.1145/3465416.3483300
+links: []
 url_pdf: ''
 url_code: 'https://github.com/hguzmang/eaamo'
 url_dataset: ''
@@ -49,7 +47,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
+  caption: ''
   focal_point: ""
   preview_only: false
 
@@ -67,5 +65,3 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ''
 ---
-
-Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).

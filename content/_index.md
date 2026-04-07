@@ -53,7 +53,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: PhD student
+        - title: PhD Candidate
           company: Harvard University
           company_url: ''
           company_logo: org-gc
@@ -61,7 +61,7 @@ sections:
           date_start: '2022-08-31'
           date_end: ''
           description: ''
-        - title: B.S. in Applied Mathematics
+        - title: Bachelor of Science in Applied Mathematics
           company: Instituto Tecnológico Autónomo de México
           company_url: ''
           company_logo: org-x

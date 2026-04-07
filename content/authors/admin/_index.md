@@ -36,10 +36,10 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Applied Mathematics
+    - course: PhD Candidate in Applied Mathematics
       institution: Harvard University
       year: 2022
-    - course: BSc in Applied Mathematics
+    - course: Bachelor of Science in Applied Mathematics
       institution: Instituto Tecnológico Autónomo de México (ITAM)
       year: 2020
 

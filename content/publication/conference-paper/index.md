@@ -45,8 +45,6 @@ tags: []
 featured: true
 
 links:
-  - name: DOI
-    url: https://doi.org/10.48550/arXiv.2309.11443
   - name: OpenReview
     url: https://openreview.net/forum?id=xtitv3kMTe
 url_pdf: ''
@@ -61,7 +59,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
+  caption: ''
   focal_point: ''
   preview_only: false
 
@@ -79,5 +77,3 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ''
 ---
-
-Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).
