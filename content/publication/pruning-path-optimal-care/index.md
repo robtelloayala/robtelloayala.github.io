@@ -2,12 +2,12 @@
 title: "Pruning the path to optimal care: Identifying systematically suboptimal medical decision-making with inverse reinforcement learning"
 
 authors:
-  - Ilaria Bovenzi
-  - Adam Carmel
-  - Min Hu
-  - Ruth Hurwitz
-  - Fiachra McBride
-  - Linda Benac
+  - Inko Bovenzi
+  - Adi Carmel
+  - Michael Hu
+  - Rebecca Hurwitz
+  - Fiona McBride
+  - Leo Benac
   - admin
   - Finale Doshi-Velez
 
