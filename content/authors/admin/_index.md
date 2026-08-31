@@ -15,7 +15,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Fourth-year PhD Candidate in Applied Mathematics
+role: Fifth-year PhD Candidate in Applied Mathematics
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -85,5 +85,5 @@ email: ''
 highlight_name: true
 ---
 
-My name is (Jose) Roberto Tello Ayala (he/him/his), I am a fourth-year (G4) PhD candidate advised by Professor [Finale Doshi-Velez](https://finale.seas.harvard.edu). I am part of the [Data to Actionable Knowledge Lab](https://dtak.github.io) at [Harvard John A. Paulson School of Engineering and Applied Sciences](https://seas.harvard.edu), as well as the [Fahed Lab](https://fahedlab.com) at the [Cardiovascular Disease Initiative (CVDi)](https://www.broadinstitute.org/cardiovascular-disease) of the [Broad Institute of Harvard and MIT](https://www.broadinstitute.org) and [Massachusetts General Hospital (MGH)](https://www.massgeneral.org/heart-center/cardiovascular-research-center). My research centers on developing interpretable model architectures to generate meaningful insights from data, with a particular focus on healthcare applications. My work aims to improve clinical decision-making, extract relevant phenotypes from cardiac imaging in cardiovascular disease, and identify the factors driving antidepressant treatment dropout in precision psychiatry.
+My name is (Jose) Roberto Tello Ayala (he/him/his), I am a fifth-year (G5) PhD candidate advised by Professor [Finale Doshi-Velez](https://finale.seas.harvard.edu). I am part of the [Data to Actionable Knowledge Lab](https://dtak.github.io) at [Harvard John A. Paulson School of Engineering and Applied Sciences](https://seas.harvard.edu), as well as the [Fahed Lab](https://fahedlab.com) at the [Cardiovascular Disease Initiative (CVDi)](https://www.broadinstitute.org/cardiovascular-disease) of the [Broad Institute of Harvard and MIT](https://www.broadinstitute.org) and [Massachusetts General Hospital (MGH)](https://www.massgeneral.org/heart-center/cardiovascular-research-center). My research centers on developing interpretable model architectures to generate meaningful insights from data, with a particular focus on healthcare applications. My work aims to improve clinical decision-making, extract relevant phenotypes from cardiac imaging in cardiovascular disease, and identify the factors driving antidepressant treatment dropout in precision psychiatry.
 {style="text-align: justify;"}
