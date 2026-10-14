@@ -12,16 +12,39 @@ sections:
       username: admin
       # Override your bio text from `authors/admin/_index.md`?
       text:
+  - block: markdown
+    id: research
+    content:
+      title: Research Themes
+      text: |-
+        ### Interpretability and model auditing
+
+        I develop methods to understand what predictive models learn and how their information compares with expert knowledge, including [Signature Activation](/publication/conference-paper/) and [Shared Canonical Component Removal](/publication/shared-canonical-component-removal/).
+
+        ### Cardiovascular imaging
+
+        I use machine learning to extract measurable features from coronary angiography and study their relationship with disease, including [coronary artery tortuosity](/publication/coronary-artery-tortuosity/).
+
+        ### Precision psychiatry
+
+        I study factors associated with antidepressant treatment dropout and investigate what predictive models can reveal beyond expert-defined clinical features.
+    design:
+      columns: '2'
   - block: collection
     id: featured
     content:
       title: Selected Publications
-      text: |-
-        Explore the full [publications archive](/publication/) for papers and linked materials.
       filters:
         folders:
           - publication
-        exclude_featured: false
+        featured_only: true
+      count: 4
+      sort_by: Params.featured_order
+      sort_ascending: true
+      archive:
+        enable: true
+        link: /publication/
+        text: See all publications
     design:
       columns: '2'
       view: citation
@@ -42,6 +65,7 @@ sections:
         #  icon: camera-retro
         #  icon_pack: fas
   - block: experience
+    id: education
     content:
       title: Education
       # Date format for experience
@@ -53,7 +77,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: PhD Candidate
+        - title: PhD Candidate in Applied Mathematics
           company: Harvard University
           company_url: ''
           company_logo: org-gc
@@ -201,10 +225,9 @@ sections:
     content:
       title: Contact
       subtitle:
-      text: |-
-        Email is the best way to reach me. You can also use the profile links above for Google Scholar, GitHub, LinkedIn, and my CV.
+      text: Get in touch by email.
       # Contact (add or remove contact options as necessary)
-      email: jtelloayala [at] g [dot] harvard [dot] edu
+      email: jtelloayala@g.harvard.edu
       #phone: 888 888 88 88
       #appointment_url: 'https://calendly.com'
       #address:
@@ -252,12 +275,7 @@ sections:
           link: uploads/resume.pdf
       # Email form provider
       form:
-        provider: netlify
-        formspree:
-          id:
-        netlify:
-          # Enable CAPTCHA challenge to reduce spam?
-          captcha: false
+        provider: ''
     design:
       columns: '2'
 ---

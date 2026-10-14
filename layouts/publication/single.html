@@ -1,0 +1,57 @@
+{{- define "main" -}}
+{{ $pub_types := partial "functions/get_pub_types" $ }}
+{{ $pub_type_param := .Params.publication_types | default (slice 0) }}
+{{ $pub_type := (int (index $pub_type_param 0)) | default 0 }}
+{{ if gt $pub_type (sub (len $pub_types) 1) }}
+  {{ warnf "Unknown publication type in %s" .File.Path }}
+  {{ $pub_type = 0 }}
+{{ end }}
+
+<div class="pub">
+  {{ partial "page_header.html" . }}
+  <div class="article-container">
+    {{ with .Params.takeaway }}
+    <section class="publication-takeaway" aria-labelledby="takeaway-heading">
+      <h2 id="takeaway-heading">Key takeaway</h2>
+      <p>{{ . | markdownify }}</p>
+    </section>
+    {{ end }}
+
+    {{ with .Params.abstract }}
+    <section class="publication-abstract" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">{{ i18n "abstract" }}</h2>
+      <div class="pub-abstract">{{ . | markdownify }}</div>
+    </section>
+    {{ end }}
+    {{ with .Params.abstract_attribution }}
+    <p class="abstract-attribution">{{ . | markdownify }}</p>
+    {{ end }}
+
+    <dl class="publication-details">
+      {{ if ne $pub_type 0 }}
+      <dt>{{ i18n "publication_type" }}</dt>
+      <dd><a href="{{ (site.GetPage "section" "publication").RelPermalink }}#{{ $pub_type | anchorize }}">{{ index $pub_types $pub_type }}</a></dd>
+      {{ end }}
+      {{ with .Params.publication }}
+      <dt>{{ i18n "publication" }}</dt>
+      <dd>{{ . | markdownify }}</dd>
+      {{ end }}
+      {{ with .Params.published_online }}
+      <dt>Published online</dt>
+      <dd><time datetime="{{ . }}">{{ time.Format "January 2, 2006" . }}</time></dd>
+      {{ end }}
+      {{ with .Params.doi }}
+      <dt>DOI</dt>
+      <dd><a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ . }}</a></dd>
+      {{ end }}
+      {{ with .Params.keywords }}
+      <dt>Keywords</dt>
+      <dd>{{ delimit . "; " }}</dd>
+      {{ end }}
+    </dl>
+
+    <div class="article-style">{{ .Content }}</div>
+    {{ partial "page_footer" . }}
+  </div>
+</div>
+{{- end -}}

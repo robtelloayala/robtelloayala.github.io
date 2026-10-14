@@ -18,7 +18,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'JRTAs personal page'
+    description: 'Jose Roberto Tello Ayala develops interpretable machine learning for clinical decision-making, cardiovascular imaging, and precision psychiatry at Harvard University.'
     twitter: ''
   analytics:
     google_analytics: ''
@@ -36,14 +36,14 @@ header:
     show_logo: true
     show_language: false
     show_day_night: true
-    show_search: true
+    show_search: false
     highlight_active_link: true
 
 # Site footer
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Jose Roberto Tello Ayala. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false

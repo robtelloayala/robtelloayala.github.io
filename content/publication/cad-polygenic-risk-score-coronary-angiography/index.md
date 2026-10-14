@@ -41,8 +41,6 @@ tags: []
 featured: false
 
 links:
-  - name: DOI
-    url: https://doi.org/10.1093/eurheartj/ehae666.1333
   - name: Article
     url: https://academic.oup.com/eurheartj/article/45/Supplement_1/ehae666.1333/7837931
 url_pdf: ''

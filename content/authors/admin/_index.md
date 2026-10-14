@@ -1,6 +1,6 @@
 ---
 # Display name
-title: J. Roberto Tello Ayala
+title: Jose Roberto Tello Ayala
 
 # Full name (for SEO)
 first_name: Jose
@@ -15,7 +15,8 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Fifth-year PhD Candidate in Applied Mathematics
+role: PhD Candidate in Applied Mathematics
+research_identity: Interpretable machine learning for clinical decision-making.
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -25,7 +26,7 @@ organizations:
     url: https://seas.harvard.edu
 
 # Short bio (displayed in user profile at end of posts)
-bio: I develop interpretable model architectures for healthcare and other high-stakes applications.
+bio: I develop interpretable machine-learning methods for clinical decision-making, with applications in cardiovascular imaging and precision psychiatry.
 
 # Interests to show in About widget
 interests:
@@ -50,7 +51,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: /#contact
+    link: mailto:jtelloayala@g.harvard.edu
     label: Contact
   - icon: twitter
     icon_pack: fab
@@ -85,5 +86,4 @@ email: ''
 highlight_name: true
 ---
 
-My name is (Jose) Roberto Tello Ayala (he/him/his), I am a fifth-year (G5) PhD candidate advised by Professor [Finale Doshi-Velez](https://finale.seas.harvard.edu). I am part of the [Data to Actionable Knowledge Lab](https://dtak.github.io) at [Harvard John A. Paulson School of Engineering and Applied Sciences](https://seas.harvard.edu), as well as the [Fahed Lab](https://fahedlab.com) at the [Cardiovascular Disease Initiative (CVDi)](https://www.broadinstitute.org/cardiovascular-disease) of the [Broad Institute of Harvard and MIT](https://www.broadinstitute.org) and [Massachusetts General Hospital (MGH)](https://www.massgeneral.org/heart-center/cardiovascular-research-center). My research centers on developing interpretable model architectures to generate meaningful insights from data, with a particular focus on healthcare applications. My work aims to improve clinical decision-making, extract relevant phenotypes from cardiac imaging in cardiovascular disease, and identify the factors driving antidepressant treatment dropout in precision psychiatry.
-{style="text-align: justify;"}
+I am a fifth-year PhD candidate in Applied Mathematics at Harvard University, advised by [Finale Doshi-Velez](https://finale.seas.harvard.edu). I develop interpretable machine-learning methods for clinical decision-making, with applications in cardiovascular imaging and precision psychiatry. I am part of Harvard's [Data to Actionable Knowledge Lab](https://dtak.github.io) and the [Fahed Lab](https://fahedlab.com) at the Broad Institute and Massachusetts General Hospital.

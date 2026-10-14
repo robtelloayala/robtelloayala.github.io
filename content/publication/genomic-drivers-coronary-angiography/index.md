@@ -39,11 +39,10 @@ abstract: This study evaluates genomic markers associated with coronary artery d
 summary: Genomic risk factors for angiographic coronary disease burden and downstream cardiovascular outcomes.
 
 tags: []
-featured: false
+featured: true
+featured_order: 4
 
 links:
-  - name: DOI
-    url: https://doi.org/10.1001/jamanetworkopen.2024.55368
   - name: Article
     url: https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2829417
   - name: PubMed

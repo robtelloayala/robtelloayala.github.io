@@ -43,6 +43,7 @@ tags: []
 
 # Display this page in the Featured widget?
 featured: true
+featured_order: 2
 
 links:
   - name: OpenReview
