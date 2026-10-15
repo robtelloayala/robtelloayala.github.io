@@ -1,3 +1,65 @@
+.profile-math-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1260px;
+  height: 300px;
+  margin: 1.5rem auto 0;
+}
+
+.profile-math-banner img,
+.profile-math-banner canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.profile-math-banner canvas,
+.profile-math-banner.wave-ready img {
+  visibility: hidden;
+}
+
+.profile-math-banner.wave-ready canvas {
+  visibility: visible;
+}
+
+.wave-motion-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #657580;
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+
+.wave-motion-toggle:hover {
+  color: #1668b4;
+  background: #f4f7f9;
+}
+
+.wave-motion-toggle:focus-visible {
+  outline: 2px solid #1668b4;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-math-banner.wave-ready img {
+    visibility: visible;
+  }
+
+  .profile-math-banner canvas,
+  .wave-motion-toggle {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .wg-about-avatar .avatar-wrapper {
     width: 190px;
@@ -13,6 +75,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .profile-math-banner {
+    height: 200px;
+  }
+
   .wg-about-avatar #profile {
     display: flex;
     flex-direction: column;
