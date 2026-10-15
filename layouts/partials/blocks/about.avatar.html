@@ -91,12 +91,9 @@
   {{ end }}
 
   {{ with resources.Get "media/math-banner.webp" }}
-  <div class="profile-math-banner">
+  <div class="profile-math-banner" aria-hidden="true">
     <img src="{{ .RelPermalink }}" alt="" width="{{ .Width }}" height="{{ .Height }}" decoding="async">
     <canvas aria-hidden="true"></canvas>
-    <button class="wave-motion-toggle" type="button" aria-label="Pause wave animation" title="Pause wave animation" hidden>
-      <i class="fas fa-pause" aria-hidden="true"></i>
-    </button>
   </div>
   {{ end }}
   {{ $wave_script := resources.Get "js/math-wave.js" | js.Build (dict "format" "iife" "target" "es2018" "minify" true) | fingerprint "md5" }}

@@ -17,7 +17,7 @@ OUTPUT = Path(__file__).resolve().parents[1] / "assets/media/math-banner.webp"
 
 
 def main():
-    x, y = np.meshgrid(np.linspace(-10, 10, 121), np.linspace(-8, 8, 97))
+    x, y = np.meshgrid(np.linspace(-11, 11, 133), np.linspace(-9, 9, 109))
     envelope = np.exp(-(x**2 + y**2) / 28)
     z = envelope * np.sin(x) * np.cos(y)
 
@@ -49,17 +49,17 @@ def main():
         [((distance[:, :-1] + distance[:, 1:]) / 2).ravel(),
          ((distance[:-1] + distance[1:]) / 2).ravel()]
     )
-    fade = np.clip((radius - 4.5) / 3.5, 0, 1)
+    fade = np.clip((radius - 5.0) / 4.0, 0, 1)
     edge = 1 - fade**2 * (3 - 2 * fade)
-    palette = LinearSegmentedColormap.from_list("research", ["#328b91", "#4f7ca6", "#596ea0"])
+    palette = LinearSegmentedColormap.from_list("research", ["#308de5", "#a449cc"])
     colors = palette(np.clip((heights + 0.93) / 1.86, 0, 1))
-    colors[:, 3] = (0.06 + 0.48 * strength) * edge
+    colors[:, 3] = (0.08 + 0.58 * strength) * edge
 
     fig = plt.figure(figsize=(16, 3.8), dpi=200)
     ax = fig.add_axes((0, 0, 1, 1))
     ax.add_collection(LineCollection(segments, colors=colors, linewidths=0.5))
-    ax.set_xlim(-10.5, 10.5)
-    ax.set_ylim(-5.2, 5.2)
+    ax.set_xlim(-9.8, 9.8)
+    ax.set_ylim(-5.4, 5.4)
     ax.set_axis_off()
     fig.canvas.draw()
 

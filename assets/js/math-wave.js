@@ -8,13 +8,12 @@ import {
   WebGLRenderer,
 } from './vendor/three/three.module.js';
 
+const MOTION_SPEED = 4;
 const banner = document.querySelector('.profile-math-banner');
 if (banner) initializeWave(banner);
 
 function initializeWave(element) {
   const canvas = element.querySelector('canvas');
-  const toggle = element.querySelector('.wave-motion-toggle');
-  const icon = toggle.querySelector('i');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let renderer;
   let scene;
@@ -22,7 +21,6 @@ function initializeWave(element) {
   let material;
   let failed = false;
   let visible = false;
-  let paused = false;
   let frame = null;
   let previousTime = null;
   let elapsed = 0;
@@ -36,7 +34,6 @@ function initializeWave(element) {
   function showFallback() {
     stop();
     element.classList.remove('wave-ready');
-    toggle.hidden = true;
   }
 
   function createScene() {
@@ -46,7 +43,7 @@ function initializeWave(element) {
     renderer.setClearColor(0xffffff, 0);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     scene = new Scene();
-    camera = new OrthographicCamera(-10.5, 10.5, 5.2, -5.2, 0.1, 100);
+    camera = new OrthographicCamera(-9.8, 9.8, 5.4, -5.4, 0.1, 100);
     const azimuth = 40 * Math.PI / 180;
     const elevation = 29 * Math.PI / 180;
     camera.up.set(0, 0, 1);
@@ -59,14 +56,14 @@ function initializeWave(element) {
 
     // Quad grid edges only, without the diagonals of a triangle wireframe.
     const vertices = [];
-    const columns = 120;
-    const rows = 96;
+    const columns = 132;
+    const rows = 108;
     for (let row = 0; row <= rows; row++) {
       for (let column = 0; column <= columns; column++) {
-        const x = -10 + column / columns * 20;
-        const y = -8 + row / rows * 16;
-        if (column < columns) vertices.push(x, y, 0, x + 20 / columns, y, 0);
-        if (row < rows) vertices.push(x, y, 0, x, y + 16 / rows, 0);
+        const x = -11 + column / columns * 22;
+        const y = -9 + row / rows * 18;
+        if (column < columns) vertices.push(x, y, 0, x + 22 / columns, y, 0);
+        if (row < rows) vertices.push(x, y, 0, x, y + 18 / rows, 0);
       }
     }
     const geometry = new BufferGeometry();
@@ -84,13 +81,13 @@ function initializeWave(element) {
           vec2 point = position.xy;
           float radius = length(point);
           float envelope = exp(-dot(point, point) / 28.0);
-          // Slow angular drift of the wave, returning to the supplied function at t=0.
+          // Angular drift of the wave, matching the supplied function at t=0.
           float angle = 0.14 * sin(time * 0.055) * exp(-radius * radius / 90.0);
           mat2 rotation = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
           vec2 wave = rotation * point;
           height = envelope * sin(wave.x + time * 0.075) * cos(wave.y - time * 0.045);
-          float edge = 1.0 - smoothstep(4.5, 8.0, radius);
-          opacity = (0.06 + 0.48 * envelope) * edge;
+          float edge = 1.0 - smoothstep(5.0, 9.0, radius);
+          opacity = (0.08 + 0.58 * envelope) * edge;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(point, height * 3.0, 1.0);
         }
       `,
@@ -98,9 +95,9 @@ function initializeWave(element) {
         varying float height;
         varying float opacity;
         void main() {
-          vec3 teal = vec3(0.196, 0.545, 0.569);
-          vec3 blue = vec3(0.349, 0.431, 0.627);
-          vec3 color = mix(teal, blue, clamp((height + 0.93) / 1.86, 0.0, 1.0));
+          vec3 blue = vec3(0.188, 0.553, 0.898);
+          vec3 purple = vec3(0.643, 0.286, 0.800);
+          vec3 color = mix(blue, purple, clamp((height + 0.93) / 1.86, 0.0, 1.0));
           gl_FragColor = vec4(color, opacity);
         }
       `,
@@ -129,7 +126,7 @@ function initializeWave(element) {
     if (delta < 1000 / 30) return;
     elapsed += Math.min(delta, 100) / 1000;
     previousTime = now;
-    material.uniforms.time.value = elapsed;
+    material.uniforms.time.value = elapsed * MOTION_SPEED;
     renderer.render(scene, camera);
   }
 
@@ -156,19 +153,9 @@ function initializeWave(element) {
       }
     }
     element.classList.add('wave-ready');
-    toggle.hidden = false;
-    if (paused) stop();
-    else if (frame === null) frame = requestAnimationFrame(animate);
+    if (frame === null) frame = requestAnimationFrame(animate);
   }
 
-  toggle.addEventListener('click', () => {
-    paused = !paused;
-    const label = paused ? 'Resume wave animation' : 'Pause wave animation';
-    toggle.setAttribute('aria-label', label);
-    toggle.title = label;
-    icon.className = paused ? 'fas fa-play' : 'fas fa-pause';
-    update();
-  });
   new IntersectionObserver(([entry]) => {
     visible = entry.isIntersecting;
     update();
