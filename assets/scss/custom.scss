@@ -3,10 +3,12 @@
 }
 
 .profile-math-banner {
+  --wave-height: 400px;
   position: relative;
   width: 100vw;
-  height: 400px;
-  margin: 1.5rem calc(50% - 50vw) 0;
+  height: var(--wave-height);
+  // Pull the transparent top edge closer to the bio without shrinking the wave.
+  margin: -1rem calc(50% - 50vw) 0;
 }
 
 .profile-math-banner img,
@@ -17,6 +19,13 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+.profile-math-banner img {
+  // Match the animation's 3.6:1 composition and crop on narrow screens.
+  min-width: calc(var(--wave-height) * 3.6);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .profile-math-banner canvas,
@@ -54,7 +63,7 @@
 
 @media (max-width: 767.98px) {
   .profile-math-banner {
-    height: 260px;
+    --wave-height: 260px;
   }
 
   .wg-about-avatar #profile {
@@ -103,6 +112,14 @@
 #contact {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+#about {
+  padding-bottom: 1rem;
+}
+
+#research {
+  padding-top: 2rem;
 }
 
 #profile {
@@ -224,6 +241,14 @@
   #contact {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  #about {
+    padding-bottom: 0.5rem;
+  }
+
+  #research {
+    padding-top: 1.5rem;
   }
 
   .wg-about-avatar .article-style {

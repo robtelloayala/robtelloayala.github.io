@@ -9,6 +9,7 @@ import {
 } from './vendor/three/three.module.js';
 
 const MOTION_SPEED = 4;
+const WAVE_ASPECT = 3.6;
 const banner = document.querySelector('.profile-math-banner');
 if (banner) initializeWave(banner);
 
@@ -115,7 +116,15 @@ function initializeWave(element) {
 
   function resize() {
     if (!renderer || failed) return;
-    renderer.setSize(element.clientWidth, element.clientHeight, false);
+    const width = element.clientWidth;
+    const height = element.clientHeight;
+    if (!width || !height) return;
+    // Crop the wide composition on narrow screens instead of squeezing it.
+    const halfWidth = 9.8 * Math.min(1, width / height / WAVE_ASPECT);
+    camera.left = -halfWidth;
+    camera.right = halfWidth;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height, false);
     renderer.render(scene, camera);
   }
 

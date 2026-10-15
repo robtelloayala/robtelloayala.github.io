@@ -55,7 +55,7 @@ def main():
     colors = palette(np.clip((heights + 0.93) / 1.86, 0, 1))
     colors[:, 3] = (0.08 + 0.58 * strength) * edge
 
-    fig = plt.figure(figsize=(16, 3.8), dpi=200)
+    fig = plt.figure(figsize=(14.4, 4), dpi=200)
     ax = fig.add_axes((0, 0, 1, 1))
     ax.add_collection(LineCollection(segments, colors=colors, linewidths=0.5))
     ax.set_xlim(-9.8, 9.8)
